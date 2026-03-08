@@ -33,10 +33,6 @@ Do giới hạn về thời gian của môn học thực tập cơ sở, hệ th
 * **Backend (Xử lý nghiệp vụ):** Sử dụng **Java Spring Boot**. Nền tảng này cung cấp cấu trúc kiến trúc vững chắc, bảo mật cao và tối ưu cho việc xây dựng các RESTful API phục vụ cho quá trình giao tiếp dữ liệu với Frontend.
 * **Hệ quản trị Cơ sở dữ liệu:** Sử dụng **MySQL**. Là một hệ quản trị cơ sở dữ liệu quan hệ mạnh mẽ, lưu trữ và truy xuất các dữ liệu có cấu trúc một cách an toàn và hiệu quả (bao gồm thông tin người dùng, bài viết, chuyên mục).
 
-Chào bạn, bản nháp Chương 1 bạn chỉnh sửa rất mạch lạc, đầy đủ và bám sát vào đúng trọng tâm của một hệ thống blog cá nhân thực tế. Việc bổ sung thêm tính năng xem/cập nhật thông tin tác giả và hiển thị bài viết thịnh hành (trending) sẽ giúp blog trở nên chuyên nghiệp và kết nối với người đọc tốt hơn.
-
-Dựa trên những điều chỉnh của bạn ở Chương 1, mình đã cập nhật lại toàn bộ **Chương 2** để đảm bảo tính nhất quán của báo cáo. Đặc biệt, bảng thuật ngữ đã được trình bày lại theo đúng định dạng bạn yêu cầu.
-
 ---
 
 ### CHƯƠNG 2: TÀI LIỆU PHA YÊU CẦU CỦA HỆ THỐNG
