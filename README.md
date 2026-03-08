@@ -3,6 +3,7 @@
 ### CHƯƠNG 1: GIỚI THIỆU ĐỀ TÀI
 
 **1. Đặt vấn đề**
+
 Trong bối cảnh công nghệ thông tin phát triển và thay đổi liên tục, việc cập nhật kiến thức mới là một yêu cầu bắt buộc đối với mỗi lập trình viên cũng như những người làm việc trong lĩnh vực kỹ thuật. Quá trình tiếp thu các ngôn ngữ, framework hay những nguyên lý thiết kế phần mềm thường diễn ra với tốc độ rất nhanh. Tuy nhiên, hệ quả của việc "học nhanh" là bộ não con người khó có thể ghi nhớ toàn bộ và tường tận mọi chi tiết kỹ thuật trong thời gian dài.
 
 Do đó, thói quen vừa học vừa ghi chép, hệ thống hóa lại tài liệu là một giải pháp thiết yếu. Việc lưu trữ lại những bài học chuyên môn (ví dụ như các khái niệm về lập trình hướng đối tượng, cách triển khai một kiến trúc phần mềm, hay các thủ thuật tối ưu hóa cơ sở dữ liệu) không chỉ giúp củng cố kiến thức tại thời điểm học mà còn tạo ra một "bộ nhớ ngoài" đắc lực để dễ dàng tra cứu lại khi cần thiết trong công việc thực tế.
@@ -10,6 +11,7 @@ Do đó, thói quen vừa học vừa ghi chép, hệ thống hóa lại tài li
 Hơn thế nữa, tri thức sẽ sinh sôi khi được chia sẻ. Nhu cầu công khai các bài viết, bài nghiên cứu cá nhân để giao lưu, trao đổi với cộng đồng cũng ngày một tăng cao. Xuất phát từ những nhu cầu thực tiễn đó, đề tài **"Xây dựng hệ thống Blog cá nhân"** được lựa chọn nghiên cứu và phát triển. Ứng dụng này sẽ cung cấp một không gian riêng tư và chuyên nghiệp để tác giả biên soạn bài viết bằng Markdown, đồng thời là nơi lưu trữ, phân loại theo chuỗi bài học (series) và chia sẻ kiến thức đến với mọi người.
 
 **2. Mục tiêu đề tài**
+
 Đề tài hướng tới việc xây dựng một hệ thống website blog cá nhân hoàn chỉnh với các mục tiêu cụ thể sau:
 
 * **Về mặt tiện ích:** Tạo ra một nền tảng cho phép người quản trị (admin) dễ dàng đăng tải, quản lý các bài viết học thuật được soạn thảo dưới định dạng Markdown (định dạng tối ưu nhất cho dân kỹ thuật).
@@ -17,12 +19,14 @@ Hơn thế nữa, tri thức sẽ sinh sôi khi được chia sẻ. Nhu cầu c�
 * **Về mặt kỹ thuật:** Vận dụng và kết hợp thành thạo các kiến thức đã học về phát triển ứng dụng Web, bao gồm việc xây dựng giao diện phía người dùng (Frontend), thiết kế API và xử lý logic nghiệp vụ phía máy chủ (Backend), cũng như quản trị cơ sở dữ liệu.
 
 **3. Phạm vi đề tài**
+
 Do giới hạn về thời gian của môn học thực tập cơ sở, hệ thống sẽ tập trung vào các chức năng cốt lõi nhất của một blog cá nhân, bao gồm:
 
 * **Đối với người dùng vãng lai (Guest):** Truy cập trang chủ; xem danh sách bài viết mới nhất hoặc trending; phân loại bài viết theo danh mục (Category) và chuỗi bài học (Series). Đọc chi tiết bài viết với giao diện hiển thị Markdown rõ ràng. Xem thông tin, phương thức liên hệ của chủ website
 * **Đối với quản trị viên (Admin):** Có cơ chế đăng nhập bảo mật. Quản lý (Thêm, sửa, xóa, ẩn/hiện) các bài viết, danh mục và series. Trực tiếp soạn thảo bài viết bằng công cụ hỗ trợ Markdown. Cập nhập thông tin và phương thức liên hệ của bản thân
 
 **4. Công nghệ sử dụng**
+
 Để đáp ứng các yêu cầu về hiệu năng, tính mở rộng và trải nghiệm người dùng, hệ thống được xây dựng dựa trên các công nghệ sau:
 
 * **Frontend (Giao diện người dùng):** Sử dụng **ReactJS**. Đây là một thư viện JavaScript phổ biến giúp xây dựng giao diện người dùng theo dạng các component độc lập, mang lại trải nghiệm mượt mà, tốc độ phản hồi nhanh (Single Page Application) và rất phù hợp để xử lý giao diện hiển thị Markdown động.
@@ -74,6 +78,7 @@ Hệ thống phục vụ hai nhóm đối tượng chính:
 * **Luồng hoạt động của Admin:** Admin truy cập trang đăng nhập ẩn và xác thực. Tại Dashboard, Admin có thể cập nhật hồ sơ cá nhân của mình. Khi học được kiến thức mới, Admin tạo Bài viết, gõ nội dung bằng Markdown, chọn trạng thái (Lưu nháp hoặc Xuất bản) và gắn vào Chuyên mục/Series tương ứng. Các thay đổi này sẽ lập tức phản ánh lên giao diện của Guest sau khi lưu.
 
 **2.5. Những thông tin/ đối tượng mà hệ thống cần xử lý**
+
 Hệ thống thao tác với 4 thực thể dữ liệu chính:
 
 1. **Thông tin tác giả (Profile/Users):** Tài khoản đăng nhập, Mật khẩu (mã hóa), Họ tên, Ảnh đại diện, Giới thiệu ngắn, Link liên hệ (Github, Facebook, LinkedIn).
