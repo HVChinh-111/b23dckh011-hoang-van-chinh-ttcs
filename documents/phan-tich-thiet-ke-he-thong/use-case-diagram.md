@@ -102,3 +102,9 @@ Sử dụng khái niệm kế thừa giống như trong Lập trình hướng đ
 * **Use Case Generalization (Kế thừa giữa các Use Case):**
 * *Ví dụ:* Use Case "Thanh toán viện phí" là Use case cha. Hai Use Case con là "Thanh toán bằng Tiền mặt" và "Thanh toán bằng Chuyển khoản" sẽ kế thừa nó và định nghĩa cách thực hiện chi tiết.
 
+## III. Thực hành
+
+- Có thể xác định 1 actor tác động đến 1 use case khi có đủ 2 điều kiện:
+1. Có actor đấy tác động thì use case đấy mới diễn ra được
+2. Không có actor đấy tác động thì use case đấy không thể diễn ra được
+
