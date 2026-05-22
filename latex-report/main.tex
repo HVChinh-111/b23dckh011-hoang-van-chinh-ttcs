@@ -127,7 +127,6 @@
     {\fontsize{15pt}{1}\selectfont\textbf{BÁO CÁO}}\\
     {\fontsize{15pt}{1}\selectfont\textbf{MÔN: THỰC TẬP CƠ SỞ}}\\[0.5cm]
 
-    {\fontsize{15pt}{1}\selectfont\textbf{NHÓM 5}}\\[0.25cm]
     {\fontsize{18pt}{1}\selectfont\textbf{ĐỀ TÀI: XÂY DỰNG HỆ THỐNG BLOG CÁ NHÂN}}\\
 \end{center}
 
@@ -198,22 +197,202 @@ Do giới hạn về thời gian của môn học thực tập cơ sở, hệ th
 \hline
 \textbf{Thuật ngữ (Tiếng Anh)} & \textbf{Thuật ngữ (Tiếng Việt)} & \textbf{Ý nghĩa} \\
 \hline
-\textbf{Markdown} \textit{(n)} & Ngôn ngữ đánh dấu & Là một ngôn ngữ đánh dấu văn bản nhẹ, cho phép người viết sử dụng các ký tự thông thường để định dạng văn bản (in đậm, in nghiêng, chèn khối mã nguồn). Hệ thống sẽ tự động render thành HTML trực quan. \\
+
+\multicolumn{3}{|l|}{\textbf{Nhóm thuật ngữ nghiệp vụ của hệ thống Blog}} \\
 \hline
-\textbf{Topics} \textit{(n)} & Các chủ đề & Là nhóm phân loại bài viết theo một chủ đề, lĩnh vực kỹ thuật hoặc ngôn ngữ lập trình cụ thể (Ví dụ: Lập trình Web, Database, Java Core). \\
+
+\textbf{Blog} \textit{(n)} & Nhật ký / Trang blog & Là website dùng để đăng tải các bài viết, chia sẻ kiến thức, kinh nghiệm học tập hoặc tài liệu kỹ thuật của tác giả. Trong hệ thống này, Blog là sản phẩm chính mà Guest truy cập để đọc nội dung. \\
 \hline
-\textbf{Series} \textit{(n)} & Chuỗi bài & Là tập hợp các bài viết có tính tuần tự, liên kết chặt chẽ với nhau để tạo thành một lộ trình hướng dẫn chi tiết từ cơ bản đến nâng cao. \\
+
+\textbf{Post} \textit{(n)} & Bài viết & Là đơn vị nội dung cơ bản của Blog, chứa tiêu đề, slug, nội dung Markdown, trạng thái, ngày tạo, ngày cập nhật và ngày xuất bản. \\
 \hline
-\textbf{Post} \textit{(n)} & Bài viết & Đơn vị nội dung cơ bản của blog, chứa kiến thức, chia sẻ hoặc tài liệu học thuật do tác giả biên soạn. \\
+
+\textbf{Topic} \textit{(n)} & Chủ đề / Chuyên mục & Là nhóm phân loại bài viết theo một chủ đề, lĩnh vực kỹ thuật hoặc ngôn ngữ lập trình cụ thể. Một bài viết có thể thuộc nhiều Topic khác nhau. \\
 \hline
-\textbf{Trending} \textit{(adj)} & Thịnh hành / Nổi bật & Trạng thái của các bài viết nhận được nhiều sự quan tâm, lượt xem lớn hoặc được đánh giá cao trong một khoảng thời gian nhất định. \\
+
+\textbf{Series} \textit{(n)} & Chuỗi bài viết & Là tập hợp các bài viết có tính tuần tự, được sắp xếp theo một thứ tự cụ thể để tạo thành lộ trình học tập hoặc hướng dẫn có cấu trúc. \\
 \hline
-\textbf{Profile} \textit{(n)} & Hồ sơ cá nhân & Khu vực lưu trữ thông tin giới thiệu về tác giả và các phương thức liên hệ (Email, GitHub, LinkedIn,...). \\
+
+\textbf{Series Post Item} \textit{(n)} & Dòng bài viết trong chuỗi & Là đối tượng trung gian thể hiện một bài viết nằm trong một Series cụ thể, đồng thời lưu trữ thứ tự của bài viết trong Series thông qua \texttt{sequenceNumber}. \\
 \hline
-\textbf{Admin} \textit{(n)} & Quản trị viên & Là chủ sở hữu của website, người có toàn quyền đăng nhập để quản lý nội dung, danh mục, chuỗi bài và thông tin cá nhân. \\
+
+\textbf{Profile} \textit{(n)} & Hồ sơ cá nhân & Là khu vực lưu trữ thông tin giới thiệu về tác giả, bao gồm họ tên, giới thiệu ngắn, ảnh đại diện, email liên hệ và các liên kết mạng xã hội. \\
 \hline
-\textbf{Guest / Reader} \textit{(n)} & Khách vãng lai & Là những người truy cập vào hệ thống website để đọc tài liệu, tìm kiếm kiến thức mà không cần tài khoản đăng nhập. \\
+
+\textbf{Author Profile} \textit{(n)} & Hồ sơ tác giả & Là hồ sơ công khai của tác giả Blog, được hiển thị trên trang chủ để người đọc biết thông tin cơ bản và phương thức liên hệ với tác giả. \\
 \hline
+
+\textbf{Admin} \textit{(n)} & Quản trị viên & Là chủ sở hữu hoặc người quản lý hệ thống Blog, có quyền đăng nhập vào khu vực quản trị để quản lý bài viết, Topic, Series, hồ sơ cá nhân và tài nguyên media. \\
+\hline
+
+\textbf{Guest / Reader} \textit{(n)} & Khách truy cập / Người đọc & Là người dùng truy cập Blog để đọc bài viết, tìm kiếm nội dung, lọc bài viết theo Topic hoặc Series mà không cần đăng nhập. \\
+\hline
+
+\textbf{Dashboard} \textit{(n)} & Bảng điều khiển & Là khu vực quản trị sau khi Admin đăng nhập thành công, cho phép Admin truy cập các chức năng quản lý nội dung của hệ thống. \\
+\hline
+
+\textbf{Homepage} \textit{(n)} & Trang chủ & Là trang đầu tiên của Blog, hiển thị thông tin tác giả và danh sách các bài viết đã xuất bản. \\
+\hline
+
+\textbf{Slug} \textit{(n)} & Chuỗi định danh URL & Là chuỗi ký tự duy nhất dùng trong đường dẫn URL để xác định một bài viết, Topic hoặc Series. Slug thường chỉ gồm chữ thường, chữ số và dấu gạch ngang. \\
+\hline
+
+\textbf{Markdown} \textit{(n)} & Ngôn ngữ đánh dấu & Là ngôn ngữ đánh dấu văn bản nhẹ, cho phép tác giả định dạng nội dung bằng các ký tự thông thường như tiêu đề, in đậm, in nghiêng, danh sách, liên kết, hình ảnh và khối mã nguồn. \\
+\hline
+
+\textbf{Table of Contents} \textit{(n)} & Mục lục & Là danh sách các tiêu đề con được trích xuất từ nội dung bài viết, giúp người đọc di chuyển nhanh đến các phần trong bài viết chi tiết. \\
+\hline
+
+\textbf{Media File} \textit{(n)} & Tệp tài nguyên & Là tệp được upload lên hệ thống, thường là hình ảnh dùng trong nội dung bài viết hoặc ảnh đại diện của tác giả. \\
+\hline
+
+\textbf{Avatar} \textit{(n)} & Ảnh đại diện & Là hình ảnh đại diện của tác giả, được hiển thị trong phần hồ sơ cá nhân hoặc trang chủ của Blog. \\
+\hline
+
+\textbf{Draft} \textit{(n/adj)} & Bản nháp & Là trạng thái của bài viết chưa được công khai cho Guest. Bài viết ở trạng thái \texttt{DRAFT} chỉ phục vụ cho Admin quản lý và chỉnh sửa. \\
+\hline
+
+\textbf{Published} \textit{(adj)} & Đã xuất bản & Là trạng thái của bài viết đã được công khai cho Guest. Chỉ những bài viết có trạng thái \texttt{PUBLISHED} mới được hiển thị ở trang chủ, trang tìm kiếm, trang lọc và trang chi tiết bài viết. \\
+\hline
+
+\textbf{Keyword} \textit{(n)} & Từ khóa & Là chuỗi ký tự do người dùng nhập vào ô tìm kiếm để tìm các bài viết có tiêu đề phù hợp. \\
+\hline
+
+\textbf{Pagination} \textit{(n)} & Phân trang & Là cơ chế chia danh sách kết quả thành nhiều trang nhỏ, giúp giảm lượng dữ liệu tải về mỗi lần và cải thiện hiệu năng hiển thị. \\
+\hline
+
+\textbf{Live Preview} \textit{(n)} & Xem trước trực tiếp & Là chức năng hiển thị kết quả render nội dung Markdown song song với quá trình Admin soạn thảo bài viết. \\
+\hline
+
+\textbf{Upload} \textit{(v/n)} & Tải lên & Là thao tác gửi file từ máy người dùng lên máy chủ để hệ thống lưu trữ và sử dụng, ví dụ upload ảnh trong bài viết hoặc ảnh đại diện. \\
+\hline
+
+\textbf{Local File System} \textit{(n)} & Hệ thống tệp cục bộ & Là nơi lưu trữ vật lý các file upload trên máy chủ, chẳng hạn như ảnh bài viết hoặc ảnh đại diện. \\
+\hline
+
+\textbf{Contact Email} \textit{(n)} & Email liên hệ & Là địa chỉ email công khai của tác giả, dùng để người đọc có thể liên hệ khi cần thiết. \\
+\hline
+
+\multicolumn{3}{|l|}{\textbf{Nhóm thuật ngữ công nghệ và kiến trúc}} \\
+\hline
+
+\textbf{Frontend} \textit{(n)} & Phần giao diện người dùng & Là phần hệ thống chạy trên trình duyệt, chịu trách nhiệm hiển thị giao diện, xử lý tương tác người dùng và gửi yêu cầu đến Backend thông qua API. \\
+\hline
+
+\textbf{Backend} \textit{(n)} & Phần xử lý phía máy chủ & Là phần hệ thống chạy trên server, chịu trách nhiệm xử lý nghiệp vụ, xác thực, truy xuất dữ liệu, quản lý file và cung cấp API cho Frontend. \\
+\hline
+
+\textbf{Database} \textit{(n)} & Cơ sở dữ liệu & Là nơi lưu trữ lâu dài các dữ liệu chính của hệ thống như tài khoản Admin, phiên đăng nhập, bài viết, Topic, Series, hồ sơ tác giả và file upload. \\
+\hline
+
+\textbf{ReactJS} \textit{(n)} & Thư viện ReactJS & Là thư viện JavaScript dùng để xây dựng giao diện người dùng phía Frontend theo hướng component. \\
+\hline
+
+\textbf{Java Spring Boot} \textit{(n)} & Nền tảng Java Spring Boot & Là framework Backend dùng để xây dựng REST API, xử lý nghiệp vụ, kết nối cơ sở dữ liệu và tổ chức các thành phần phía máy chủ. \\
+\hline
+
+\textbf{MySQL} \textit{(n)} & Hệ quản trị cơ sở dữ liệu MySQL & Là hệ quản trị cơ sở dữ liệu quan hệ được sử dụng để lưu trữ dữ liệu của hệ thống Blog. \\
+\hline
+
+\textbf{REST API} \textit{(n)} & Giao diện lập trình REST & Là tập hợp các endpoint cho phép Frontend giao tiếp với Backend thông qua giao thức HTTP để lấy, tạo, cập nhật hoặc xóa dữ liệu. \\
+\hline
+
+\textbf{API} \textit{(abbr.)} & Giao diện lập trình ứng dụng & Là giao diện cho phép các thành phần phần mềm giao tiếp với nhau. Trong hệ thống này, API thường là các hàm phía Frontend hoặc endpoint phía Backend. \\
+\hline
+
+\textbf{Component-Based Architecture} \textit{(n)} & Kiến trúc theo thành phần & Là cách tổ chức hệ thống thành các thành phần nghiệp vụ độc lập như \texttt{auth}, \texttt{post}, \texttt{topic}, \texttt{series}, \texttt{profile} và \texttt{media}. \\
+\hline
+
+\textbf{Package-by-Feature} \textit{(n)} & Tổ chức package theo chức năng & Là cách tổ chức mã nguồn theo từng chức năng nghiệp vụ thay vì chia thuần túy theo tầng kỹ thuật. Mỗi package có thể chứa Controller, Service, Repository, Entity, DTO và các lớp liên quan của cùng một chức năng. \\
+\hline
+
+\textbf{Controller} \textit{(n)} & Lớp điều khiển API & Là lớp Backend chịu trách nhiệm tiếp nhận request từ Frontend, gọi Service tương ứng và trả response về cho client. \\
+\hline
+
+\textbf{Service} \textit{(n)} & Lớp xử lý nghiệp vụ & Là lớp Backend chịu trách nhiệm thực thi logic nghiệp vụ chính của hệ thống, ví dụ tạo bài viết, cập nhật profile, xác thực đăng nhập hoặc quản lý Series. \\
+\hline
+
+\textbf{Repository} \textit{(n)} & Lớp truy cập dữ liệu & Là lớp chịu trách nhiệm thao tác với cơ sở dữ liệu, chẳng hạn như tìm kiếm, lưu, cập nhật hoặc xóa Entity. \\
+\hline
+
+\textbf{Entity} \textit{(n)} & Lớp thực thể & Là lớp biểu diễn dữ liệu nghiệp vụ chính của hệ thống và thường được ánh xạ với bảng trong cơ sở dữ liệu. Ví dụ: \texttt{Post}, \texttt{Topic}, \texttt{Series}, \texttt{AuthorProfile}. \\
+\hline
+
+\textbf{DTO} \textit{(abbr.)} & Đối tượng truyền dữ liệu & Viết tắt của \textit{Data Transfer Object}, là lớp dùng để truyền dữ liệu giữa Frontend và Backend hoặc giữa các tầng trong Backend mà không để lộ trực tiếp Entity. \\
+\hline
+
+\textbf{Enum} \textit{(n)} & Kiểu liệt kê & Là kiểu dữ liệu chỉ cho phép một tập giá trị cố định, ví dụ \texttt{PostStatusEnum} gồm \texttt{DRAFT} và \texttt{PUBLISHED}. \\
+\hline
+
+\textbf{Mapper} \textit{(n)} & Lớp ánh xạ dữ liệu & Là lớp hoặc thành phần dùng để chuyển đổi dữ liệu giữa Entity và DTO. \\
+\hline
+
+\textbf{HTTP Request} \textit{(n)} & Yêu cầu HTTP & Là yêu cầu được gửi từ Frontend đến Backend để thực hiện một thao tác như lấy danh sách bài viết, đăng nhập hoặc cập nhật dữ liệu. \\
+\hline
+
+\textbf{HTTP Response} \textit{(n)} & Phản hồi HTTP & Là dữ liệu Backend trả về cho Frontend sau khi xử lý request. Response có thể chứa dữ liệu thành công hoặc thông tin lỗi. \\
+\hline
+
+\textbf{404 Not Found} \textit{(n)} & Lỗi không tìm thấy & Là mã phản hồi HTTP cho biết tài nguyên được yêu cầu không tồn tại, ví dụ bài viết, Topic hoặc Series đã bị xóa hoặc slug không hợp lệ. \\
+\hline
+
+\textbf{Design Class Diagram} \textit{(n)} & Biểu đồ lớp pha thiết kế & Là biểu đồ mô tả cấu trúc lớp ở mức thiết kế, bao gồm các lớp Frontend, Controller, Service, Repository, DTO, Entity và quan hệ giữa chúng. \\
+\hline
+
+\textbf{Design Sequence Diagram} \textit{(n)} & Biểu đồ tuần tự pha thiết kế & Là biểu đồ mô tả thứ tự tương tác giữa các lớp hoặc đối tượng trong quá trình thực hiện một use case cụ thể. \\
+\hline
+
+\textbf{Entity Relationship Diagram} \textit{(n)} & Biểu đồ quan hệ thực thể & Là biểu đồ mô tả cấu trúc dữ liệu quan hệ trong cơ sở dữ liệu, bao gồm bảng, khóa chính, khóa ngoại và quan hệ giữa các bảng. \\
+\hline
+
+\multicolumn{3}{|l|}{\textbf{Nhóm thuật ngữ bảo mật và xử lý dữ liệu}} \\
+\hline
+
+\textbf{Authentication} \textit{(n)} & Xác thực & Là quá trình kiểm tra danh tính của Admin thông qua email và mật khẩu trước khi cho phép truy cập vào khu vực quản trị. \\
+\hline
+
+\textbf{Authorization} \textit{(n)} & Phân quyền & Là quá trình xác định người dùng đã xác thực có được phép thực hiện một hành động cụ thể hay không. \\
+\hline
+
+\textbf{Access Token} \textit{(n)} & Mã truy cập & Là token có thời gian sống ngắn, được dùng để xác thực các request của Admin khi truy cập các API cần bảo vệ. \\
+\hline
+
+\textbf{Refresh Token} \textit{(n)} & Mã làm mới phiên & Là token có thời gian sống dài hơn, được dùng để cấp lại Access Token mới khi Access Token hết hạn mà không yêu cầu Admin đăng nhập lại. \\
+\hline
+
+\textbf{Token} \textit{(n)} & Mã xác thực & Là chuỗi dữ liệu đại diện cho phiên xác thực của người dùng, được hệ thống dùng để kiểm tra quyền truy cập. \\
+\hline
+
+\textbf{Session} \textit{(n)} & Phiên đăng nhập & Là thông tin thể hiện một lần đăng nhập hợp lệ của Admin. Trong hệ thống, phiên đăng nhập được quản lý thông qua \texttt{AdminSession}. \\
+\hline
+
+\textbf{Token Revocation} \textit{(n)} & Thu hồi token & Là quá trình vô hiệu hóa token, thường xảy ra khi Admin đăng xuất hoặc khi hệ thống phát hiện rủi ro bảo mật. \\
+\hline
+
+\textbf{Password Hash} \textit{(n)} & Mật khẩu đã băm & Là kết quả của quá trình mã hóa một chiều mật khẩu. Hệ thống lưu chuỗi hash thay vì lưu mật khẩu dạng văn bản thuần túy để tăng tính bảo mật. \\
+\hline
+
+\textbf{Secure Token Storage} \textit{(n)} & Lưu trữ token an toàn & Là cơ chế lưu trữ Access Token và Refresh Token ở phía trình duyệt sao cho hạn chế nguy cơ bị đánh cắp bởi mã độc hoặc tấn công XSS. \\
+\hline
+
+\textbf{Validation} \textit{(n)} & Kiểm tra hợp lệ & Là quá trình kiểm tra dữ liệu đầu vào trước khi xử lý, ví dụ kiểm tra rỗng, kiểm tra định dạng email, URL, slug hoặc kiểm tra trùng lặp dữ liệu. \\
+\hline
+
+\textbf{URL Validation} \textit{(n)} & Kiểm tra định dạng URL & Là quá trình xác định đường dẫn nhập vào có đúng định dạng URL hợp lệ hay không, ví dụ bắt đầu bằng \texttt{http://} hoặc \texttt{https://}. \\
+\hline
+
+\textbf{XSS} \textit{(abbr.)} & Tấn công chèn mã độc & Viết tắt của \textit{Cross-Site Scripting}, là hình thức tấn công trong đó kẻ xấu chèn mã JavaScript độc hại vào nội dung hiển thị trên website. \\
+\hline
+
+\textbf{Sanitize} \textit{(v)} & Làm sạch dữ liệu & Là quá trình loại bỏ hoặc vô hiệu hóa các đoạn mã nguy hiểm trong dữ liệu đầu vào trước khi lưu trữ hoặc hiển thị, nhằm giảm nguy cơ tấn công XSS. \\
+\hline
+
+\textbf{Plain Text} \textit{(n)} & Văn bản thuần túy & Là dữ liệu chưa được mã hóa hoặc băm. Trong hệ thống, mật khẩu không được lưu hoặc so sánh trực tiếp ở dạng Plain Text. \\
+\hline
+
+\textbf{LocalDateTime} \textit{(n)} & Kiểu thời gian ngày giờ & Là kiểu dữ liệu trong Java dùng để biểu diễn ngày và giờ, được sử dụng cho các trường như ngày tạo, ngày cập nhật, ngày xuất bản hoặc thời điểm token hết hạn. \\
+\hline
+
 \end{longtable}
 
 \subsection{Mô hình nghiệp vụ bằng ngôn ngữ tự nhiên}
@@ -260,7 +439,7 @@ Hệ thống thao tác với 4 thực thể dữ liệu chính:
     \item Một \textbf{Series} chứa \textit{nhiều} \textbf{Bài viết}. Một \textbf{Bài viết} có thể thuộc hoặc \textit{không thuộc} \textbf{Series} nào.
 \end{itemize}
 
-\subsection{Mô hình nghiệp vụ bằng UML}
+\subsection{Mô tả mô hình use case bằng ngôn ngữ tự nhiên}
 
 \textbf{3.1. Xác định các actor của hệ thống}
 \begin{itemize}
@@ -288,41 +467,19 @@ Hệ thống thao tác với 4 thực thể dữ liệu chính:
     \item \texttt{UC11: Cập nhật thông tin cá nhân và phương thức liên hệ}
     \item \texttt{UC12: Đăng xuất}
 \end{itemize}
+\newpage
 
+\subsection{Biểu đồ Use Case tổng quát}
 \begin{figure}[H]
     \centering
-    \includegraphics[height=1.0\textwidth]{use_case_diagram/Blog_UCD.jpg}
-
+    \includegraphics[
+        width=\textwidth,
+        height=0.85\textheight,
+        keepaspectratio
+    ]{use_case_diagram/Blog_UCD.jpg}
     \caption{Biểu đồ Use Case tổng quát}
 \end{figure}
-
-\subsection{Bảng yêu cầu người dùng}
-
-\begin{longtable}{|c|p{10.5cm}|c|}
-\hline
-\textbf{ID} & \textbf{Mô tả yêu cầu} & \textbf{Độ ưu tiên} \\
-\hline
-\textbf{FR01} & Khách truy cập có thể xem danh sách bài viết mới nhất và tìm kiếm bài viết trên trang chủ. & Cao \\
-\hline
-\textbf{FR02} & Khách truy cập có thể lọc và tìm kiếm các bài viết theo từng Topic hoặc Series cấu trúc sẵn. & Cao \\
-\hline
-\textbf{FR03} & Khách truy cập có thể đọc chi tiết bài viết với giao diện Markdown đã được render hoàn chỉnh (hiển thị rõ cấu trúc text, code block, hình ảnh). & Cao \\
-\hline
-\textbf{FR04} & Khách truy cập có thể xem thông tin giới thiệu về tác giả và các phương thức liên hệ (Facebook, Github, LinkedIn) trên trang chủ & Trung bình \\
-\hline
-\textbf{FR05} & Hệ thống cung cấp cơ chế đăng nhập bảo mật dành riêng cho Quản trị viên (Admin). & Cao \\
-\hline
-\textbf{FR06} & Quản trị viên có trình soạn thảo văn bản hỗ trợ cú pháp Markdown để tạo mới, chỉnh sửa bài viết. & Cao \\
-\hline
-\textbf{FR07} & Quản trị viên có thể thiết lập trạng thái bài viết: Lưu nháp (Draft) hoặc Xuất bản (Published). & Cao \\
-\hline
-\textbf{FR08} & Quản trị viên có thể gắn bài viết vào một Chuyên mục và/hoặc một Series cụ thể khi đăng bài. & Cao \\
-\hline
-\textbf{FR09} & Quản trị viên có quyền thêm mới, cập nhật tên/mô tả hoặc xóa các Chuyên mục và Series. & Cao \\
-\hline
-\textbf{FR10} & Quản trị viên có thể chỉnh sửa, cập nhật thông tin tiểu sử cá nhân và các đường dẫn liên hệ của mình trên hệ thống. & Trung bình \\
-\hline
-\end{longtable}
+\newpage
 
 \section{CHƯƠNG 3: TÀI LIỆU PHA PHÂN TÍCH CỦA HỆ THỐNG}
 
@@ -341,7 +498,7 @@ Hệ thống thao tác với 4 thực thể dữ liệu chính:
 \textbf{Basic Flow} & 
 1. Người dùng gửi yêu cầu truy cập trang chủ của hệ thống. \newline
 2. Hệ thống truy xuất dữ liệu hồ sơ (Profile) của tác giả, bao gồm: Họ tên, Ảnh đại diện, Giới thiệu ngắn và Các liên kết mạng xã hội. \newline
-3. Hệ thống tiếp tục truy xuất danh sách các bài viết (được sắp xếp theo ngày tạo giảm dần) và đáp ứng điều kiện hiển thị (BR01.1). \newline
+3. Hệ thống tiếp tục truy xuất danh sách các bài viết đã xuất bản, được sắp xếp theo ngày xuất bản giảm dần và đáp ứng điều kiện hiển thị (BR01.1). \newline
 4. Hệ thống tổng hợp dữ liệu và hiển thị giao diện Trang chủ cho người dùng, bao gồm khu vực giới thiệu tác giả và danh sách bài viết. \newline
 5. Người dùng xem thông tin và danh sách bài viết trên trang chủ. \\ \hline
 \textbf{Alternative Flow} & 
@@ -443,7 +600,7 @@ NFR03.2: Tính khả dụng: Nếu từ khóa quá dài, hệ thống phải c�
 \textbf{Basic Flow} & 
 1. Người dùng yêu cầu xem chi tiết một bài viết thông qua giao diện. \newline
 2. Hệ thống tiếp nhận yêu cầu và xác định định danh của bài viết. \newline
-3. Hệ thống truy xuất dữ liệu chi tiết của bài viết từ cơ sở dữ liệu (Tiêu đề, Nội dung, Ngày đăng, Thông tin tác giả, Topic, Series liên kết). \newline
+3. Hệ thống truy xuất dữ liệu chi tiết của bài viết từ cơ sở dữ liệu (Tiêu đề, Nội dung, Ngày đăng, Topic, Series liên kết). \newline
 4. Hệ thống kiểm tra trạng thái của bài viết có thỏa mãn điều kiện hiển thị (BR04.1). \newline
 5. Hệ thống phân tích nội dung bài viết, tự động trích xuất các tiêu đề mục con (Heading) để tạo thành Mục lục (Table of Contents). \newline
 6. Hệ thống kiểm tra dữ liệu và nhận thấy bài viết có thuộc về một Series cụ thể. Hệ thống tiếp tục truy xuất danh sách các bài viết khác trong cùng Series này và sắp xếp theo thứ tự (BR04.2). \newline
@@ -800,70 +957,363 @@ NFR12.1: Thời gian phản hồi: Thao tác đăng xuất, dọn dẹp dữ li�
 \end{longtable}
 
 \subsection{Analysis Entity Class Diagram}
-
-\subsection{Analysis Class Diagram}
-
-\subsubsection{UC01: Truy cập trang chủ}
-\subsubsection{UC02: Lọc bài viết theo Topic / Series}
-\subsubsection{UC03: Tìm kiếm bài viết}
-\subsubsection{UC04: Xem chi tiết bài viết}
-\subsubsection{UC05: Đăng nhập hệ thống}
-\subsubsection{UC06: Quản lý Topics}
-\subsubsection{UC07: Quản lý Series}
-\subsubsection{UC08: Quản lý bài viết}
-\subsubsection{UC09: Thêm bài viết mới}
-\subsubsection{UC10: Chỉnh sửa bài viết}
-\subsubsection{UC11: Cập nhật thông tin cá nhân}
-\subsubsection{UC12: Đăng xuất}
-
-\subsection{Analysis Sequence Diagram}
-
-\subsubsection{UC01: Truy cập trang chủ}
-\subsubsection{UC02: Lọc bài viết theo Topic / Series}
-\subsubsection{UC03: Tìm kiếm bài viết}
-\subsubsection{UC04: Xem chi tiết bài viết}
-\subsubsection{UC05: Đăng nhập hệ thống}
-\subsubsection{UC06: Quản lý Topics}
-\subsubsection{UC07: Quản lý Series}
-\subsubsection{UC08: Quản lý bài viết}
-\subsubsection{UC09: Thêm bài viết mới}
-\subsubsection{UC10: Chỉnh sửa bài viết}
-\subsubsection{UC11: Cập nhật thông tin cá nhân}
-\subsubsection{UC12: Đăng xuất}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.75\textheight, keepaspectratio]{analysis_class_diagram/Blog_AECD.jpg}
+    \caption{Biểu đồ lớp thực thể pha phân tích}
+\end{figure}
 
 \newpage
 \section{CHƯƠNG 4: TÀI LIỆU PHA THIẾT KẾ CỦA HỆ THỐNG}
+Chương 4 sẽ trình bày các tài liệu thiết kế của hệ thống Blog cá nhân dựa trên các kết quả đã xây dựng ở pha phân tích, bao gồm Use Case Specification, Use Case Diagram và Analysis Entity Class Diagram. Mục tiêu của pha thiết kế là chuyển các yêu cầu nghiệp vụ thành các mô hình kỹ thuật cụ thể hơn, làm cơ sở cho quá trình cài đặt hệ thống.
 
+Trong phạm vi thiết kế, hệ thống được xây dựng theo mô hình ứng dụng Web với các công nghệ chính như sau:
+
+\begin{itemize}
+    \item \textbf{Frontend:} Sử dụng ReactJS để xây dựng giao diện người dùng, xử lý tương tác phía trình duyệt và gửi yêu cầu đến Backend thông qua các API.
+    \item \textbf{Backend:} Sử dụng Java Spring Boot để triển khai các chức năng nghiệp vụ, cung cấp REST API, xử lý xác thực, quản lý bài viết, chủ đề, chuỗi bài viết, hồ sơ tác giả và tài nguyên media.
+    \item \textbf{Database:} Sử dụng MySQL để lưu trữ lâu dài các dữ liệu chính của hệ thống như tài khoản quản trị, phiên đăng nhập, bài viết, topic, series, hồ sơ tác giả và thông tin file upload.
+\end{itemize}
+
+Về kiến trúc phần mềm, hệ thống được tổ chức theo hướng \textit{component-based architecture}, hay còn gọi là \textit{package-by-feature}. Thay vì chia mã nguồn thuần túy theo các tầng chung như controller, service, repository và entity, hệ thống được phân chia thành các thành phần nghiệp vụ độc lập như:
+
+\begin{itemize}
+    \item \texttt{auth}: xử lý đăng nhập, đăng xuất và quản lý phiên làm việc.
+    \item \texttt{profile}: quản lý thông tin hồ sơ tác giả.
+    \item \texttt{post}: quản lý bài viết và nội dung blog.
+    \item \texttt{topic}: quản lý các chuyên mục của bài viết.
+    \item \texttt{series}: quản lý các chuỗi bài viết có thứ tự.
+    \item \texttt{media}: quản lý file ảnh và tài nguyên upload.
+\end{itemize}
+
+Bên trong mỗi thành phần, các lớp được tổ chức theo vai trò thiết kế như Controller, Service, Repository, Entity, DTO và các lớp hỗ trợ liên quan. Cách tổ chức này giúp tăng tính gắn kết trong từng chức năng, giảm sự phụ thuộc không cần thiết giữa các phần của hệ thống và thuận lợi hơn cho việc mở rộng, bảo trì về sau.
+
+Các biểu đồ trong chương này bao gồm:
+
+\begin{itemize}
+    \item \textbf{Design Entity Class Diagram:} Mô tả các lớp thực thể ở mức thiết kế, đã được cụ thể hóa theo hướng triển khai.
+    \item \textbf{Design Class Diagram:} Mô tả cấu trúc lớp cho từng use case, bao gồm các lớp phía Frontend, Controller, Service, Repository, DTO và Entity tương ứng.
+    \item \textbf{Design Sequence Diagram:} Mô tả luồng tương tác giữa các lớp trong từng chức năng chính của hệ thống.
+    \item \textbf{Entity Relationship Diagram:} Mô tả cấu trúc dữ liệu quan hệ trong cơ sở dữ liệu MySQL, làm cơ sở cho quá trình cài đặt và ánh xạ dữ liệu.
+\end{itemize}
+\newpage
 \subsection{Design Entity Class Diagram}
+\begin{figure}[H]
+    \centering
+    \includegraphics[height=0.82\textheight, keepaspectratio]{design_class_diagram/Blog_DECD.jpg}
+    \caption{Biểu đồ lớp thực thể pha thiết kế}
+\end{figure}
+\newpage
 
 \subsection{Design Class Diagram}
-
 \subsubsection{UC01: Truy cập trang chủ}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.85\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC01_DCD.jpg}
+    \caption{Biểu đồ lớp UC01 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC02: Lọc bài viết theo Topic / Series}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC02_DCD.jpg}
+    \caption{Biểu đồ lớp UC02 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC03: Tìm kiếm bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC03_DCD.jpg}
+    \caption{Biểu đồ lớp UC03 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC04: Xem chi tiết bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC04_DCD.jpg}
+    \caption{Biểu đồ lớp UC04 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC05: Đăng nhập hệ thống}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC05_DCD.jpg}
+    \caption{Biểu đồ lớp UC05 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC06: Quản lý Topics}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC06_DCD.jpg}
+    \caption{Biểu đồ lớp UC06 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC07: Quản lý Series}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC07_DCD.jpg}
+    \caption{Biểu đồ lớp UC07 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC08: Quản lý bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC08_DCD.jpg}
+    \caption{Biểu đồ lớp UC08 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC09: Thêm bài viết mới}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC09_DCD.jpg}
+    \caption{Biểu đồ lớp UC09 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC10: Chỉnh sửa bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC10_DCD.jpg}
+    \caption{Biểu đồ lớp UC10 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC11: Cập nhật thông tin cá nhân}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC11_DCD.jpg}
+    \caption{Biểu đồ lớp UC11 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC12: Đăng xuất}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_class_diagram/UC12_DCD.jpg}
+    \caption{Biểu đồ lớp UC12 pha thiết kế}
+\end{figure}
+\newpage
 
 \subsection{Design Sequence Diagram}
 
 \subsubsection{UC01: Truy cập trang chủ}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC01_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC01 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC02: Lọc bài viết theo Topic / Series}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC02A_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC02A(Theo topic) pha thiết kế}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC02B_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC02B(Theo series) pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC03: Tìm kiếm bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC03_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC03 pha thiết kế}
+\end{figure}
+
 \subsubsection{UC04: Xem chi tiết bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC04_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC04 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC05: Đăng nhập hệ thống}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC05_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC05 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC06: Quản lý Topics}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC06_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC06 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC07: Quản lý Series}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC07_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC07 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC08: Quản lý bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC08_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC08 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC09: Thêm bài viết mới}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC09_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC09 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC10: Chỉnh sửa bài viết}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC10_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC10 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC11: Cập nhật thông tin cá nhân}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC11_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC11 pha thiết kế}
+\end{figure}
+\newpage
+
 \subsubsection{UC12: Đăng xuất}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.82\textheight,
+        keepaspectratio
+    ]{design_sequence_diagram/UC12_DSD.jpg}
+    \caption{Biểu đồ tuần tự UC12 pha thiết kế}
+\end{figure}
+\newpage
+
+\subsection{Entity Relationship Diagram}
+\begin{figure}[H]
+    \centering
+    \includegraphics[
+        width=\textwidth,
+        height=0.85\textheight,
+        keepaspectratio
+    ]{entity_relationship_diagram/Blog_ERD.jpg}
+    \caption{Biểu đồ quan hệ thực thể (ERD)}
+\end{figure}
 
 \end{document}
