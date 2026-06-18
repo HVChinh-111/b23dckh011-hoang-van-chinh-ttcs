@@ -1,0 +1,44 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:personal_blog_db}?useSSL=false&serverTimezone=Asia/Ho_Chi_Minh&allowPublicKeyRetrieval=true
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 12MB
+
+app:
+  jwt:
+    # Falls back to a dev secret (>= 32 bytes) if JWT_SECRET is not provided.
+    secret: ${JWT_SECRET:change-this-dev-secret-please-override-in-dotenv-min-32-bytes}
+    # Access token: 30 minutes (NFR05.1) ; Refresh token: 30 days
+    access-token-expiration: 30m
+    refresh-token-expiration: 30d
+    issuer: personal-blog
+  upload:
+    dir: ${UPLOAD_DIR:./uploads}
+    public-base-path: /uploads
+    max-content-image-size: 5242880   # 5MB (BR/UC09)
+    max-avatar-size: 2097152          # 2MB (UC11)
+    allowed-image-types: image/jpeg,image/png,image/webp
+  admin:
+    email: ${ADMIN_EMAIL:admin@blog.local}
+    password: ${ADMIN_PASSWORD:ChangeMe@123}
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:5174}

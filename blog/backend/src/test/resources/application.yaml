@@ -1,0 +1,37 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=MySQL;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password: ""
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  flyway:
+    enabled: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 12MB
+
+app:
+  jwt:
+    secret: test-secret-key-that-is-at-least-32-bytes-long-1234567890
+    access-token-expiration: 30m
+    refresh-token-expiration: 30d
+    issuer: personal-blog-test
+  upload:
+    dir: ./build/test-uploads
+    public-base-path: /uploads
+    max-content-image-size: 5242880
+    max-avatar-size: 2097152
+    allowed-image-types: image/jpeg,image/png,image/webp
+  admin:
+    email: admin@blog.local
+    password: Admin@12345
+  cors:
+    allowed-origins: http://localhost:5173
