@@ -1,0 +1,12 @@
+package com.blog.demo.auth.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.blog.demo.auth.entity.AdminAccount;
+
+public interface AdminAccountRepository extends JpaRepository<AdminAccount, String> {
+
+    Optional<AdminAccount> findByEmail(String email);
+}
